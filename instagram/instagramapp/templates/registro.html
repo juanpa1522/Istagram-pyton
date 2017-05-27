@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8">
 
- <title> Intagram </title>
+ <title> Instagram </title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -13,20 +13,21 @@
  <body>
   <div class="card" style="width: 20rem;">
    <div class="card-block">
-    <form>
+    <form action='{% url 'crear_usuario' %}' metod="POST">
+      {% csrf_token %}
      <div class="form-group" id="formulario" >
       REGISTRATE
     <div>
-      <input class="form-control" placeholder="Correo">
+      <input class="form-control" placeholder="Correo" name="email">
     </div>
     <div>
-      <input class="form-control" placeholder="Nombre">
+      <input class="form-control" placeholder="Nombre" name="nombre">
     </div>
     <div>
-      <input class="form-control"  placeholder="Usuario">
+      <input class="form-control"  placeholder="Usuario" name="username">
     </div>
     <div>
-      <input class="form-control" type="password" placeholder="Contraseña">
+      <input class="form-control" type="password" placeholder="Contraseña" name="password">
     </div>
       <button  type="button" class="btn btn-success">Registrate</button>
     </div>

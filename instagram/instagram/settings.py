@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'instagramapp.apps.instagramappConfig'
+    'instagramapp.apps.InstagramappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -119,3 +119,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_URL = 'inicio_Sesion'
+LOGIN_REDIRECT_URL = 'pagina_inicio'
+LOGOUT_REDIRECT_URL = 'inicio_sesion'
